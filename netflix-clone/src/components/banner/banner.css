@@ -12,7 +12,7 @@
 }
 
 .banner_contents{
-    margin-left: 30px;
+    margin-left: 50px;
     height: 190px;
     flex: 1; 
     display: flex; 
@@ -32,7 +32,7 @@
     width: 45rem;   
     line-height: 1.5;
     padding-top: 1rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
     max-width: 600px;
     height: 80px;
 }
