@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react'
-import axios from '../../axios';
+import React, { useEffect, useState } from "react";
+import axios from "../../axios";
+import "./row.css";
 
-const baseImageUrl = 'https://image.tmdb.org/t/p/original';
+const baseImageUrl = "https://image.tmdb.org/t/p/original";
 
 function Row({ title, fetchUrl }) {
   const [movies, setMovies] = useState([]);
@@ -16,17 +17,20 @@ function Row({ title, fetchUrl }) {
   }, [fetchUrl]);
 
   return (
-    <div className='row'>
+    <div className="row">
       <h2>{title}</h2>
-      <div className='row_posters'>
+      <div className="row_posters">
         {movies.map((movie) => (
-          <img className='row_poster' src={`${baseImageUrl}${movie.poster_path}`} alt={movie.title ? movie.title : movie.name}></img>
+          <img
+            key={movie.id}
+            className="row_poster"
+            src={`${baseImageUrl}${movie.poster_path}`}
+            alt={movie.title ? movie.title : movie.name}
+          ></img>
         ))}
       </div>
-
-      {/* container -> posters */}
     </div>
-  )
+  );
 }
 
-export default Row
+export default Row;
