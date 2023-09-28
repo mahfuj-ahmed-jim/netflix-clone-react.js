@@ -26,7 +26,7 @@ function Banner() {
       className="banner"
       style={{
         backgroundSize: "cover",
-        backgroundImage: `linear-gradient(rgba(51, 51, 51, 0.2), rgba(51, 51, 51, 1)), url(${baseImageUrl}${movie?.backdrop_path})`,
+        backgroundImage: `linear-gradient(rgba(51, 51, 51, 0.4), rgba(15, 15, 15, 1)), url(${baseImageUrl}${movie?.backdrop_path})`,
         backgroundPosition: "center center",
       }}
     >
